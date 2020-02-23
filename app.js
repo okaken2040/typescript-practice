@@ -1,14 +1,20 @@
 "use strict";
-var myName = 128;
-//関数の戻り値に対する型指定
-function returnMyName() {
-    return myName;
+function unDefined() {
+    // throw new Error("エラーです①"); ←テスト1:chromeのコンソールで見るとエラーが出てる
+    return undefined; // ←テスト2:chromeのコンソールで見るとundefinedが出てる
 }
-console.log(returnMyName());
-//voidは、あらゆる型の戻り値を許可しない。
-//ただしconsole.logは実行できる。
-function sayHello() {
-    console.log("Hello!");
-    return myName;
+console.log(unDefined());
+function noReturn() {
+    // throw new Error("エラーです②"); ←テスト1:chromeのコンソールで見るとエラーが出ていない
+    retrun;
+    undefined; // ←テスト2:chromeのコンソールで見るとundefinedが出ずにエラーが返される
 }
-sayHello();
+console.log(noReturn());
+// voidはundefinedは返すが、neverはundefinedさえも返さない
+var somethingA;
+somethingA = 0;
+console.log(somethingA);
+var somethingB;
+somethingB = 0;
+console.log(somethingB);
+// if文case文のいずれの条件に引っかからなかった場合にnever型になるらしい。
