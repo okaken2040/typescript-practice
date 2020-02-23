@@ -1,6 +1,12 @@
 "use strict";
-var olympic = ["東京", 2020];
-// タプル(tuple) :複数の型を持つ配列
-olympic[0] = 2024;
-olympic[1] = "パリ";
-//明示的に型を定義しない場合エラーは出ない。
+//列挙型(enum)
+var Colors;
+(function (Colors) {
+    Colors[Colors["Gray"] = 0] = "Gray";
+    Colors[Colors["Green"] = 100] = "Green";
+    Colors[Colors["Blue"] = 101] = "Blue"; //1ずつインクリメント(加算)されていく
+})(Colors || (Colors = {}));
+var myColor = Colors.Green;
+console.log(Colors.Gray);
+console.log(myColor);
+console.log(Colors.Blue);
