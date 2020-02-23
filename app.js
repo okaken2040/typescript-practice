@@ -1,6 +1,6 @@
 "use strict";
-var hobbies = ["読書", "スポーツ"];
-hobbies[0] = "100";
-hobbies.push(true);
-// 要素に対しては何を入れてもいいが、配列型そのものに異なる型を入れることはできない。
-hobbies = 100;
+var olympic = ["東京", 2020];
+// タプル(tuple) :複数の型を持つ配列
+olympic[0] = 2024;
+olympic[1] = "パリ";
+//明示的に型を定義しない場合エラーは出ない。
