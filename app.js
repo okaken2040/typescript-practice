@@ -1,12 +1,14 @@
 "use strict";
-//列挙型(enum)
-var Colors;
-(function (Colors) {
-    Colors[Colors["Gray"] = 0] = "Gray";
-    Colors[Colors["Green"] = 100] = "Green";
-    Colors[Colors["Blue"] = 101] = "Blue"; //1ずつインクリメント(加算)されていく
-})(Colors || (Colors = {}));
-var myColor = Colors.Green;
-console.log(Colors.Gray);
-console.log(myColor);
-console.log(Colors.Blue);
+var myName = 128;
+//関数の戻り値に対する型指定
+function returnMyName() {
+    return myName;
+}
+console.log(returnMyName());
+//voidは、あらゆる型の戻り値を許可しない。
+//ただしconsole.logは実行できる。
+function sayHello() {
+    console.log("Hello!");
+    return myName;
+}
+sayHello();

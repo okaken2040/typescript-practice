@@ -1,10 +1,18 @@
-//列挙型(enum)
-enum Colors {
-  Gray, //0
-  Green = 100,
-  Blue //1ずつインクリメント(加算)されていく
+let myName = 128;
+
+//関数の戻り値に対する型指定
+function returnMyName(): number {
+  return myName;
 }
-let myColor: Colors = Colors.Green;
-console.log(Colors.Gray)
-console.log(myColor);
-console.log(Colors.Blue)
+
+console.log(returnMyName());
+
+//voidは、あらゆる型の戻り値を許可しない。
+//ただしconsole.logは実行できる。
+
+function sayHello(): void {
+  console.log("Hello!");
+  return myName;
+}
+
+sayHello();
